@@ -4,5 +4,14 @@ from user import User
 
 class Student(User):
     
-    def learn(self):
-        pass
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.knowledge = []
+        
+    def learn(self, string):
+        self.knowledge.append(string)
+        return self.knowledge
+    
+student1=Student("","")
+
+print(student1.learn("Code the atrribute in thre class"))
